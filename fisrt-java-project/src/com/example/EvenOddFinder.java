@@ -11,12 +11,21 @@ public class EvenOddFinder {
 		System.out.println("Enter a number:");
 		num=scan.nextInt();
 		
-		if(num % 2 == 0) {
-			System.out.println(num+" is an even no.");
-		}
-		else {
-			System.out.println(num+" is an odd no.");
-		}
+//		(expression ? Statement if true : Statement if false) 		
+		
+		String result;
+		
+		result=(num%2==0 ? " is an even no." : " is an odd no.");
+		
+		System.out.println(num+ result);
+		
+		
+//		if(num % 2 == 0) {
+//			System.out.println(num+" is an even no.");
+//		}
+//		else {
+//			System.out.println(num+" is an odd no.");
+//		}
 
 	}
 
