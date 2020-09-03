@@ -12,3 +12,10 @@ eg. 2020,2012,2000 -Leap Years
 ## Find out out the Largest among 3 numbers
 
 ## Convert the Week Days Program to if-else
+
+## Read 5 Numbers and add only the odd numbers and print the sum
+
+## Find the sum of n natural numbers 
+
+## Find the sum of n natural even numbers 
+
