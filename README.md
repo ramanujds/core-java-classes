@@ -21,20 +21,23 @@ eg. 2020,2012,2000 -Leap Years
 
 ## Print the pattern
 
-**
+```
+
 1
 0 1
 1 0 1
 0 1 0 1
 1 0 1 0 1
-**
+
+```
 
 ## Write a program to print numbers from 1 to 50. If any no. is divisible by 3 print HELLO. If number is divisible by 5 print JAVA.
 If no. is divisible by both 3 and 5 print HELLO JAVA else print the number.
 
 * Sample output
 
-**
+```
+
 1
 2
 HELLO
@@ -50,4 +53,5 @@ HELLO
 13
 14
 HELLO JAVA
-**
+
+```
