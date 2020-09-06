@@ -55,3 +55,18 @@ HELLO
 HELLO JAVA
 
 ```
+
+
+## Write a program to find the sum of digits of a number
+
+* eg. 523 -> 10
+* n%10 ->3
+* n/10 ->52
+
+## Write a program to reverse a number 
+
+* eg -> 253 -> 352
+
+## Check a number is prime or not
+
+
