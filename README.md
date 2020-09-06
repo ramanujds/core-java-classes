@@ -19,3 +19,54 @@ eg. 2020,2012,2000 -Leap Years
 
 ## Find the sum of n natural even numbers 
 
+## Print the pattern
+
+```
+
+1
+0 1
+1 0 1
+0 1 0 1
+1 0 1 0 1
+
+```
+
+## Write a program to print numbers from 1 to 50. If any no. is divisible by 3 print HELLO. If number is divisible by 5 print JAVA.
+If no. is divisible by both 3 and 5 print HELLO JAVA else print the number.
+
+* Sample output
+
+```
+
+1
+2
+HELLO
+4
+JAVA
+HELLO
+7
+8
+HELLO
+JAVA
+11
+HELLO
+13
+14
+HELLO JAVA
+
+```
+
+
+## Write a program to find the sum of digits of a number
+
+* eg. 523 -> 10
+* n%10 ->3
+* n/10 ->52
+
+## Write a program to reverse a number 
+
+* eg -> 253 -> 352
+
+## Check a number is prime or not
+
+
