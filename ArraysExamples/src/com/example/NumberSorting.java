@@ -2,8 +2,10 @@ package com.example;
 
 public class NumberSorting {
 
+	static int x=0;
+	
 	public static void main(String[] args) {
-		
+	
 	int nums[]= {10,3,5,7,2};
 	
 	System.out.println("Before sorting : ");
@@ -26,6 +28,7 @@ public class NumberSorting {
 		System.out.print(n+ "\t");
 	}
 
+	System.out.println(x);
 }
 
 }
