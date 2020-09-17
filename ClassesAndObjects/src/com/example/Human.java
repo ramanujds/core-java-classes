@@ -8,6 +8,17 @@ public class Human {
 	private String name;
 	private float height;
 	
+	public Human() {
+		System.out.println("Default constructor Invoked");
+	}
+	
+	public Human(int age, String name, float height) {
+		this.age=age;
+		this.height=height;
+		this.name=name;
+		System.out.println("Constructor having 3 arguments Invoked..");
+	}
+	
 	public int getAge() {
 		return age;
 	}
