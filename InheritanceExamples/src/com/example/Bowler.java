@@ -1,11 +1,17 @@
 package com.example;
 
-public class Bowler extends Player {
+public class Bowler implements Player {
 
+	 String playerName;
+	 String team;
+	 int age;
 	String bowlingArm;
 	float economy;
 	int wickets;
+	public Bowler(int x) {
 	
+		System.out.println("Welcome Bowler");
+	}
 	public void getBowlerData() {
 		age=35;
 		playerName="Bravo";
@@ -17,6 +23,13 @@ public class Bowler extends Player {
 		
 	}
 
+
+	 public void play() {
+	
+		 System.out.println("Bowler Playing...");
+		 
+	 }
+	
 	public void showBowlerData() {
 		System.out.println(this);
 	}

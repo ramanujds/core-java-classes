@@ -4,15 +4,17 @@ public class IPL2020 {
 
 	public static void main(String[] args) {
 		
-		Batsman batsman1=new Batsman();
-		batsman1.play();
-		batsman1.getBatsmanData();
-		batsman1.showBatsmanData();
 		
-		Bowler bowler1=new Bowler();
-		bowler1.play();
-		bowler1.getBowlerData();
-		bowler1.showBowlerData();
+		Player player1=new Batsman();
+		player1.play();
+//		player1.getBatsmanData();
+//		player1.showBatsmanData();
+		
+		player1=new Bowler(25);
+		player1.play();
+		
+//		bowler1.getBowlerData();
+//		bowler1.showBowlerData();
 
 	}
 

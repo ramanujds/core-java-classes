@@ -1,14 +1,10 @@
 package com.example;
 
-public class Player {
+public interface Player {
 
-	 String playerName;
-	 String team;
-	 int age;
+	
 	 
-	 public void play() {
-		 System.out.println("Playing...");
-	 }
+ void play();
 	 
 	 
 }

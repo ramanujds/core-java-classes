@@ -1,15 +1,24 @@
 package com.example;
 
-public class Batsman extends Player {
+public class Batsman implements Player {
 
+	 String playerName;
+	 String team;
+	 int age;
 	float average;
 	float strikeRate;
 	int centuries;
 	
 	 public void play() {
-		 super.play();
+	
 		 System.out.println("Batsman Playing...");
+		 
 	 }
+	
+	public Batsman() {
+		
+		System.out.println("Welcome Batsman");
+	}
 	
 	public void getBatsmanData() {
 		playerName="MS Dhoni";
