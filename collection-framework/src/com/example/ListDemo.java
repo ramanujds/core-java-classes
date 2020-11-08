@@ -18,6 +18,7 @@ public class ListDemo {
 		items.add(2.5);
 		
 		items.add(2, "Mohit");
+		System.out.println(items);
 		
 //		for(Object obj:items) {
 //			System.out.println(obj);
@@ -32,7 +33,7 @@ public class ListDemo {
 //			System.out.println(items.get(i));
 //		}
 		
-		items.forEach(System.out::println);
+//		items.forEach(System.out::println);
 		
 		
 		
