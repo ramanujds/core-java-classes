@@ -1,6 +1,6 @@
 package com.example;
 
-public class Employee implements Comparable<Employee> {
+public class Employee {
 
 	private String empName;
 	private String email;
@@ -93,11 +93,11 @@ public class Employee implements Comparable<Employee> {
 		return true;
 	}
 
-	@Override
-	public int compareTo(Employee otherEmployee) {
-		return this.empName.compareTo(otherEmployee.empName);
-	}
-	
+//	@Override
+//	public int compareTo(Employee otherEmployee) {
+//		return this.empName.compareTo(otherEmployee.empName);
+//	}
+//	
 	
 	
 	
