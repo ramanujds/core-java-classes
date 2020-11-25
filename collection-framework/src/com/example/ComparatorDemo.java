@@ -37,10 +37,10 @@ public class ComparatorDemo {
 		employees.add(new Employee("Mahesh", "mahesh@yahoo.com", 27, 50000));
 //		employees.add(new Employee("Harsh", "harsh@yahoo.com", 25, 45000));
 //		employees.add(new Employee("Harsh", "harsh@yahoo.com", 25, 45000));
-		System.out.println("Unsorted List - ");
-		for(Employee emp:employees) {
-			System.out.println(emp);
-		}
+//		System.out.println("Unsorted List - ");
+//		for(Employee emp:employees) {
+//			System.out.println(emp);
+//		}
 		
 		Comparator<Employee> sortBySalary=new Comparator<Employee>() {
 			@Override
@@ -48,19 +48,23 @@ public class ComparatorDemo {
 				return (int)(e1.getSalary()-e2.getSalary());
 			}
 		};
-		
-	
-		Collections.sort(employees, (e1,e2)->e1.getAge()-e2.getAge());
-		System.out.println("Sorted List based on Age - ");
-		for(Employee emp:employees) {
-			System.out.println(emp);
-		}
-		
+//		
+//	
+//		Collections.sort(employees, (e1,e2)->e1.getAge()-e2.getAge());
+//		System.out.println("Sorted List based on Age - ");
+//		for(Employee emp:employees) {
+//			System.out.println(emp);
+//		}
+//		
 		Collections.sort(employees,sortBySalary);
-		System.out.println("\n\nSorted List based on Salary - ");
-		for(Employee emp:employees) {
-			System.out.println(emp);
-		}
+//		System.out.println("\n\nSorted List based on Salary - ");
+//		for(Employee emp:employees) {
+//			System.out.println(emp);
+//		}
+		
+		Employee e=employees.stream().filter(emp->emp.getSalary()>=50000).findFirst().get();
+		System.out.println(e);
+		
 		
 
 	}
