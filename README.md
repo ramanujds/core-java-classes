@@ -1,72 +1,35 @@
-# core-java-classes
+## SQL Commands
 
-## Find out whether a year is Leap Year or not
-**Hints**
-### Conditions -
-* It must be divisible by 4
-* If it is divisible by 100 then it must be divisible by 400 as well
+```sql
 
-eg. 2020,2012,2000 -Leap Years
-    2019,2015,1900,2100 - Not Leap Years
+use emp_db;
+desc dept;
+desc emp;
+SET @@auto_increment_increment=10;
+create table emp(empno int primary key auto_increment, ename varchar(30), salary float, hiredate date, 
+					deptno int, constraint fk_deptno foreign key(deptno) references dept(deptno));
 
-## Find out out the Largest among 3 numbers
+alter table emp auto_increment=1001;
 
-## Convert the Week Days Program to if-else
+insert into dept values(10,'IT','Bangalore');
 
-## Read 5 Numbers and add only the odd numbers and print the sum
+insert into emp(ename,deptno,phone_no) values('Pritam',10,55475225),('Utkarsh',10,5265623);
 
-## Find the sum of n natural numbers 
+alter table emp add phone_no int unique;
 
-## Find the sum of n natural even numbers 
+update emp set hiredate=now() where hiredate is null;
+update emp set salary=salary+1000;
+select * from emp;
+select * from dept;
+delete from emp where empno=1004;
+drop table emp;
 
-## Print the pattern
-
-```
-
-1
-0 1
-1 0 1
-0 1 0 1
-1 0 1 0 1
-
-```
-
-## Write a program to print numbers from 1 to 50. If any no. is divisible by 3 print HELLO. If number is divisible by 5 print JAVA.
-If no. is divisible by both 3 and 5 print HELLO JAVA else print the number.
-
-* Sample output
+set autocommit=false;
+savepoint p1;
+delete from emp;
+rollback to p1;
+commit;
+set autocommit=true;
+select e.empno,ename,d.deptno,location from emp e join dept d on e.deptno=d.deptno where empno=1001 
 
 ```
-
-1
-2
-HELLO
-4
-JAVA
-HELLO
-7
-8
-HELLO
-JAVA
-11
-HELLO
-13
-14
-HELLO JAVA
-
-```
-
-
-## Write a program to find the sum of digits of a number
-
-* eg. 523 -> 10
-* n%10 ->3
-* n/10 ->52
-
-## Write a program to reverse a number 
-
-* eg -> 253 -> 352
-
-## Check a number is prime or not
-
-
