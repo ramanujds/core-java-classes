@@ -201,7 +201,18 @@ values(
 
 select * from emp;
 
+select distinct job from emp order by 1;
 
+select * from emp order by sal desc;
+
+select * from emp order by deptno asc, job desc;
+
+select empno,ename, job, hiredate, floor(datediff(now(),hiredate)/365) as 'Experience' from emp;
+
+select empno,ename, job, hiredate, floor(datediff(now(),hiredate)/365) as 'Experience' from emp where mgr=7839;
+
+
+	
 	
 
 ```
