@@ -211,6 +211,18 @@ select empno,ename, job, hiredate, floor(datediff(now(),hiredate)/365) as 'Exper
 
 select empno,ename, job, hiredate, floor(datediff(now(),hiredate)/365) as 'Experience' from emp where mgr=7839;
 
+select * from emp where sal=(select max(sal) as "Max Salary" from emp);
+select ename,avg(sal) as "Average Salary" from emp;	
+select count(*) as "Total Employees" from emp;
+
+select job, max(sal) as "Max Salary", count(*) as "Total Employees", avg(sal) as "Average Salary" from emp where sal>1000 group by job having count(*)>1 ORDER BY 4;
+
+select * from emp order by sal desc limit 1,2;
+
+select * from emp where ename LIKE 'J____';
+
+select * from emp where sal+'' LIKE '___';
+
 
 	
 	
