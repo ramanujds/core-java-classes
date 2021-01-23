@@ -224,6 +224,39 @@ select * from emp where ename LIKE 'J____';
 select * from emp where sal+'' LIKE '___';
 
 
+select ename,hiredate from emp where (datediff('2001-12-31',hiredate)/365)<20;
+ select ename, sal from emp where mod(sal,200)=0;
+ select ename,hiredate from emp where hiredate like '____-12-__';
+ select ename, hiredate from emp where extract(month from hiredate)=12;
+ 
+ select empno,ename,d.deptno,dname,loc from emp e right join dept d on e.deptno=d.deptno where empno is NULL;
+ 
+ select e.ename,e.mgr, e.sal from emp e join emp m on e.mgr=m.empno where e.sal>m.sal;
+ 
+  select e.ename,e.mgr, e.sal from emp e join emp m on e.mgr=m.empno where m.job<>'PRESIDENT';
+  select e.empno,e.ename,e.mgr, e.sal from emp e join emp m on e.mgr=m.empno where m.job<>'PRESIDENT' AND e.empno in(select mgr from emp);
+ 
+  select ename from emp where empno in (select distinct mgr from emp);
+  
+   select e.empno, e.ename, e.mgr, e.sal, m.ename, m.sal from emp e join emp m on e.mgr=m.empno;
+   
+   select deptno, dname, loc from dept where deptno=(select deptno from emp group by deptno order by 1 desc limit 1);
+   
+   select d.deptno, dname, loc, count( deptno) as "Total Employees" from emp e join dept d using(deptno) group by d.deptno,d.dname,d.loc;
+   select d.deptno, dname, loc, (select count(*) from emp e where e.deptno=d.deptno) as "Total Employees" from dept d;
+   
+   select d.deptno, dname, loc from dept d left join emp using(deptno) where empno is null;
+   select * from dept where deptno not in(select deptno from emp);
+   
+   create table emp_salesman as (select * from emp where job='salesman');
+
+
+   select * from emp_salesman;
+   
+   
+-- ANY, EXISTS, ALL;
+   
+   SELECT * FROM emp WHERE sal> ALL(select sal from emp where job='MANAGER');
 	
 	
 
